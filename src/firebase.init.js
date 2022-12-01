@@ -6,15 +6,16 @@ import { getAuth } from "firebase/auth";
 
 // Your web app's Firebase configuration
 const firebaseConfig = {
-  apiKey: "AIzaSyDEIQbriVCJcLLODNApwMTfD35DoEbMsoc",
-  authDomain: "tamil-matrimony-aa70e.firebaseapp.com",
-  projectId: "tamil-matrimony-aa70e",
-  storageBucket: "tamil-matrimony-aa70e.appspot.com",
-  messagingSenderId: "761250304818",
-  appId: "1:761250304818:web:d3c403b03552af61d63d2b"
+  apiKey: "AIzaSyCAhNSWFzrQV7Lqx3z7zSKwi-gd09F1xOM",
+  authDomain: "vicodin-pharma.firebaseapp.com",
+  projectId: "vicodin-pharma",
+  storageBucket: "vicodin-pharma.appspot.com",
+  messagingSenderId: "28399542577",
+  appId: "1:28399542577:web:590c7cd37cfd16fb015010"
 };
 
 // Initialize Firebase
 const app = initializeApp(firebaseConfig);
-const auth=getAuth(app)
+const auth=getAuth(app);
+
 export default auth;

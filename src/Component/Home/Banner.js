@@ -1,55 +1,58 @@
 import React from 'react';
-import b1 from '../../img/b1.jpg'
-import b2 from '../../img/b2.jpg'
-import b3 from '../../img/b3.jpg'
-import b4 from '../../img/b4.jpg'
-
-import b5 from '../../img/b5.jpg'
-import '../Css/Banner.css'
+import { Swiper, SwiperSlide } from 'swiper/react';
+import 'swiper/css';
+import "swiper/css/navigation";
+import { Navigation } from "swiper";
+import banner1 from '../../img/banner1.jpg'
+import banner2 from '../../img/banner2.jpg'
+import banner3 from '../../img/banner3.jpg'
+import banner4 from '../../img/banner4.jpg'
 const Banner = () => {
     return (
-        <div>
-        <div class="hero banner " style={{ background: `url(${b5})`, backgroundSize: 'cover',backgroundRepeat:'no-repeat' ,}}>
-            <div class="hero-content flex-col lg:flex-row-reverse transbox">
-                <div
-                    data-aos="fade-down"
-                    data-aos-offset="200"
-                    data-aos-delay="60"
-                    data-aos-duration="1200"
-                    data-aos-easing="ease-in-out"
-                    data-aos-once="true"
+        <div className='text-start'>
+            <Swiper navigation={true} modules={[Navigation]} className="mySwiper">
+        <SwiperSlide className='' style={{ background: `url(${banner1})`, backgroundSize: 'cover',backgroundRepeat:'no-repeat' ,}}>
+          
+        <div className="p-40 min-h-screen max-w-full"   >
+  <h1 className='text-2xl uppercase '>Top <span className='text-primary'> Deal</span></h1>
+  <h1 className='text-5xl font-bold my-3'>SERVIKAL GLOVES</h1>
+  <h1 className='text-xl  '>Get up to 50% discount off today.</h1>
+  <button className="btn btn-accent uppercase mt-5">Get Started</button>
+</div>
+        </SwiperSlide>
+        <SwiperSlide className='' style={{ background: `url(${banner2})`, backgroundSize: 'cover',backgroundRepeat:'no-repeat' ,}}>
+          
+        <div className="p-40 min-h-screen max-w-full"   >
+  <h1 className='text-2xl uppercase '>Top <span className='text-primary'> Deal</span></h1>
+  <h1 className='text-5xl font-bold my-3'>ONLINE PHARMACY</h1>
+  <h1 className='text-xl  '>Get up to 50% discount off today.</h1>
+  <button className="btn btn-accent mt-5">Get Started</button>
+</div>
+        </SwiperSlide>
+       
+        <SwiperSlide className='' style={{ background: `url(${banner3})`, backgroundSize: 'cover',backgroundRepeat:'no-repeat' ,}}>
+          
+        <div className="p-40 min-h-screen max-w-full"   >
+  <h1 className='text-2xl uppercase '>Top <span className='text-primary'> Deal</span></h1>
+  <h1 className='text-5xl font-bold my-3'>PRESSURE MONITOR</h1>
+  <h1 className='text-xl  '>Get up to 50% discount off today.</h1>
+  <button className="btn btn-accent mt-5">Get Started</button>
+</div>
+        </SwiperSlide>
+        <SwiperSlide className='' style={{ background: `url(${banner4})`, backgroundSize: 'cover',backgroundRepeat:'no-repeat' ,}}>
+          
+        <div className="p-40 min-h-screen max-w-full"   >
+  <h1 className='text-2xl uppercase '>Top <span className='text-primary'> Deal</span></h1>
+  <h1 className='text-5xl font-bold my-3'>DENTAL ITEMS</h1>
+  <h1 className='text-xl  '>Get up to 50% discount off today.</h1>
+  <button className="btn btn-accent uppercase mt-5">Get Started</button>
+</div>
+        </SwiperSlide>
+       
+       
 
-                >  <img src={b2} class="lg:max-w-sm rounded-lg shadow-2xl" /></div>
-
-                <div>
-                    <div
-                        data-aos="fade-up"
-                        data-aos-offset="200"
-                        data-aos-delay="50"
-                        data-aos-duration="1000"
-                        data-aos-easing="ease-in-out"
-                        data-aos-once="true"
-                    ><h1 class="text-5xl font-bold text-primary">TAMIL <span className='text-primary'>MATRIMONY</span></h1></div>
-                    <div data-aos="fade-up"
-                        data-aos-offset="200"
-                        data-aos-delay="60"
-                        data-aos-duration="1200"
-                        data-aos-easing="ease-in-out"
-                        data-aos-once="true"
-                    > <p class="py-6 text-primary font-bold">Provident cupiditate voluptatem et in. Quaerat fugiat ut assumenda excepturi exercitationem quasi. In deleniti eaque aut repudiandae .</p></div>
-                    <div data-aos="fade-up"
-                        data-aos-offset="200"
-                        data-aos-delay="70"
-                        data-aos-duration="1400"
-                        data-aos-easing="ease-in-out"
-                        data-aos-once="true"
-                    > <button class="btn btn-primary text-white">Get Started</button></div>
-
-
-                </div>
-            </div>
+      </Swiper>
         </div>
-    </div>
     );
 };
 

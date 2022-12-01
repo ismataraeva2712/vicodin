@@ -1,21 +1,34 @@
 import React from 'react';
+import AllItemSlider from './AllItemSlider';
 import Banner from './Banner';
-import Couple from './Couple';
-import FemaleMember from './FemaleMember';
+import Blogs from './Blogs';
+import Business from './Business';
+import FeatureProducts from './FeatureProducts';
 import Footer from './Footer';
-import Members from './Members';
-import MyProfile from './MyProfile';
-
+import LeatestProducts from './LeatestProducts';
+import Mask from './Mask';
+import MedicalPartner from './MedicalPartner';
+import Sponsor from './Sponsor';
+import TopDiscount from './TopDiscount';
+import Vaccine from './Vaccine';
 
 const Home = () => {
     return (
         <div>
             <Banner></Banner>
-           <Couple></Couple>
-           <FemaleMember></FemaleMember>
-            <Members></Members>
-            <MyProfile></MyProfile>
+            <AllItemSlider></AllItemSlider>
+            <MedicalPartner></MedicalPartner>
+            <TopDiscount></TopDiscount>
+            
+            <FeatureProducts></FeatureProducts>
+            <Vaccine></Vaccine>
+            <LeatestProducts></LeatestProducts>
+            <Mask></Mask>
+            <Business></Business>
+            <Blogs></Blogs>
+            <Sponsor></Sponsor>
             <Footer></Footer>
+           
         </div>
     );
 };

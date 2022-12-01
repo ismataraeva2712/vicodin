@@ -1,37 +1,28 @@
-
+import logo from './logo.svg';
 import './App.css';
+import Navbar from './Component/Shared/Navbar';
+import { Route, Routes } from 'react-router-dom';
 import Home from './Component/Home/Home';
-import Navbar from './Component/Navbar';
-import "animate.css/animate.min.css";
-import AOS from 'aos';
-import 'aos/dist/aos.css'; 
 import Login from './Component/Login/Login';
-import { Routes, Route, Link } from "react-router-dom";
-import SignUp from './Component/Login/SignUp';
-import AllMale from './Component/Home/AllMale';
-import AllFemale from './Component/Home/AllFemale';
-import { ToastContainer, toast } from 'react-toastify';
-  import 'react-toastify/dist/ReactToastify.css';
-import MyProfile from './Component/Home/MyProfile';
-AOS.init();
+import Register from './Component/Login/Register';
+import Blogs from './Component/Home/Blogs';
 
 function App() {
   return (
-    <div >
-<Navbar></Navbar>
-<Routes>
-      <Route path='/' element={<Home></Home>}></Route>
-      <Route path='/myprofile' element={<MyProfile></MyProfile>}></Route>
+    <div className="">
+      <div className="flex flex-col w-full">
+ 
+  <div className="divider"></div> 
+  <Navbar></Navbar>
+  <Routes>
+    <Route path='/' element={<Home></Home>}></Route>
+    <Route path='/blog' element={<Blogs></Blogs>}></Route>
+    <Route path='/login' element={<Login></Login>}></Route>
+    <Route path='/register' element={<Register></Register>}></Route>
+  </Routes>
+</div>
 
-      <Route path='/allMale' element={<AllMale></AllMale>}></Route>
-      <Route path='/feMale' element={<AllFemale></AllFemale>}></Route>
-      
-      <Route path='/login' element={<Login></Login>}></Route>
-      <Route path='/signup' element={<SignUp></SignUp>}></Route>
-    
-     
-     </Routes>
-     <ToastContainer />
+   
     </div>
   );
 }

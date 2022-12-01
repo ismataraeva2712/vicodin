@@ -2,11 +2,12 @@ import React from 'react';
 import { useSignInWithEmailAndPassword, useSignInWithGoogle } from 'react-firebase-hooks/auth';
 import { useForm } from 'react-hook-form';
 
-// import Loading from './Loading';
+
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { FaUserAlt } from 'react-icons/fa';
 import auth from '../../firebase.init';
 import bg from '../../img/bg.jpg'
+import Loading from './Loading';
 const Login = () => {
     const [signInWithGoogle, gUser, gLoading, gError] = useSignInWithGoogle(auth);
     const [
@@ -21,7 +22,7 @@ const Login = () => {
     let from = location.state?.from?.pathname || "/";
 
     if (loading || gLoading) {
-        // <Loading></Loading>
+        <Loading></Loading>
     }
     let errorMessage;
     if (gError || error) {
